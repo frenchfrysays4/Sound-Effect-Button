@@ -9,25 +9,33 @@ class $modify(MyMenuLayer, MenuLayer) {
 			return false;
 		}
 
-		log::debug("Hello from my MenuLayer::init hook! This layer has {} children.", this->getChildrenCount());
+		// Log to the console/log mod is starting up
+		log::info("Starting up...");
 
-		auto myButton = CCMenuItemSpriteExtra::create(
-			CCSprite::createWithSpriteFrameName("GJ_likeBtn_001.png"),
+		// Creating the button (log)
+		log::debug("Creating the button...");
+		auto spr = ButtonSprite::create("Click Me!");
+		auto btn = CCMenuItemSpriteExtra::create(
+			spr,
 			this,
 			menu_selector(MyMenuLayer::onMyButton)
 		);
+		log::debug("Button creation completed successfully");
 
+		// Declare menu and add a child
 		auto menu = this->getChildByID("bottom-menu");
-		menu->addChild(myButton);
+		menu->addChild(btn);
 
-		myButton->setID("my-button"_spr);
+		// Added an ID the the button
+		btn->setID("sound-effect-button"_spr);
 
+		// Update the menu so that it shows in-game
 		menu->updateLayout();
 
 		return true;
 	}
 
-	void onMyButton(CCObject*) {
-		FLAlertLayer::create("Geode", "Hello from my custom mod!", "OK")->show();
+	void onMyButton(CCSprite*) {
+
 	}
 };
