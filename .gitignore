@@ -63,8 +63,5 @@ build-*/
 .idea/
 /cmake-build-*/
 
-# VSCode
-.vscode/*
-
 # version archive
 versions/*
