@@ -10,5 +10,13 @@
 	"name": "Sound Effect Button",
 	"version": "v1.0.0",
 	"developer": "frenchfrysays",
-	"description": ""
+	"description": "Adds a button that plays a sound effect",
+	"resources": {
+		"files": [
+			"res/SoundEffects/*.mp3"
+		]
+	},
+	"links": {
+		"source": "https://github.com/frenchfrysays4/Sound-Effect-Button"
+	}
 }
