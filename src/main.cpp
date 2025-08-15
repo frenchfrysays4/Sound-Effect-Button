@@ -36,6 +36,29 @@ class $modify(MyMenuLayer, MenuLayer) {
 	}
 
 	void onMyButton(CCSprite*) {
+		FLAlertLayer::create(
+			"Clicked!",
+			"I have played a <cj>Sound Effect</cj>!",
+			"OK"
+		)->show();
+		log::debug("Showed popup");
 
+		static int sound = 0;
+
+		if (sound == 0) {
+			FMODAudioEngine::sharedEngine()->playEffect("among-us-role-reveal-sound.mp3"_spr);
+		} else if (sound == 1) {
+			FMODAudioEngine::sharedEngine()->playEffect("error.mp3"_spr);
+		} else if (sound == 2) {
+			FMODAudioEngine::sharedEngine()->playEffect("metal-pipe-clang.mp3"_spr);
+		} else if (sound == 3) {
+			FMODAudioEngine::sharedEngine()->playEffect("roblox-sword.mp3"_spr);
+		} else if (sound == 4) {
+			FMODAudioEngine::sharedEngine()->playEffect("vine-boom.mp3"_spr);
+		}
+
+		sound = sound + 1;
+
+		if (sound == 5) sound = 0;
 	}
 };
