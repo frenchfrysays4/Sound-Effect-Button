@@ -1,4 +1,4 @@
-# SoundEffectButton
+# Sound Effect Button
 Adds a button that plays a sound effect when you click it.
 
 
@@ -7,7 +7,7 @@ Adds a button that plays a sound effect when you click it.
 First, you need to download the latest commit/version as source code
 
 ```sh
-# Assuming you have the CMake and a C++ compiler set up already
+# Assuming you have CMake and a C++ compiler set up already
 
 # configure
 cmake -B build
