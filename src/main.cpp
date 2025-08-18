@@ -26,7 +26,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 		auto menu = this->getChildByID("bottom-menu");
 		menu->addChild(btn);
 
-		// Added an ID the the button
+		// Added an ID to the button
 		btn->setID("sound-effect-button"_spr);
 
 		// Update the menu so that it shows in-game
@@ -35,7 +35,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 		return true;
 	}
 
-	void onMyButton(CCSprite*) {
+	void onMyButton(CCObject* sender) {
 		FLAlertLayer::create(
 			"Clicked!",
 			"I have played a <cj>Sound Effect</cj>!",
