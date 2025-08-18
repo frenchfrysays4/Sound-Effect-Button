@@ -35,7 +35,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 		return true;
 	}
 
-	void onMyButton(CCObject* sender) {
+	void onMyButton(CCObject*) {
 		FLAlertLayer::create(
 			"Clicked!",
 			"I have played a <cj>Sound Effect</cj>!",
