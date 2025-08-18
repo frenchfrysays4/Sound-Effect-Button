@@ -25,12 +25,14 @@ class $modify(MyMenuLayer, MenuLayer) {
 		// Declare menu and add a child
 		auto menu = this->getChildByID("bottom-menu");
 		menu->addChild(btn);
+		log::debug("Added the button to the menu");
 
 		// Added an ID to the button
 		btn->setID("sound-effect-button"_spr);
 
 		// Update the menu so that it shows in-game
 		menu->updateLayout();
+		log::debug("Updated layout of the menu so that the button shows");
 
 		return true;
 	}
