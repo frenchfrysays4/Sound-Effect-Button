@@ -6,10 +6,10 @@
 		"mac": "2.2074",
 		"ios": "2.2074"
 	},
-	"id": "frenchfrysays.sound_effect_button",
-	"name": "Sound Effect Button",
 	"version": "v1.0.0",
 	"developer": "frenchfrysays",
+	"id": "frenchfrysays.source_code_button",
+	"name": "Source Code Button",
 	"description": "Adds a button that plays a sound effect",
 	"resources": {
 		"files": [
