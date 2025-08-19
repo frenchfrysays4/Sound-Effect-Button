@@ -8,8 +8,8 @@
 	},
 	"version": "v1.0.0",
 	"developer": "frenchfrysays",
-	"id": "frenchfrysays.source_code_button",
-	"name": "Source Code Button",
+	"id": "frenchfrysays.sound_effect_button",
+	"name": "Sound Effect Button",
 	"description": "Adds a button that plays a sound effect",
 	"resources": {
 		"files": [
