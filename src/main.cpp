@@ -59,6 +59,8 @@ class $modify(MyMenuLayer, MenuLayer) {
 			FMODAudioEngine::sharedEngine()->playEffect("vine-boom.mp3"_spr);
 		}
 
+		log::debug("Played sound effect");
+
 		sound = sound + 1;
 
 		if (sound == 5) sound = 0;
