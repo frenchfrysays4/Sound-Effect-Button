@@ -14,7 +14,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 
 		// Creating the button (log)
 		log::debug("Creating the button...");
-		auto spr = ButtonSprite::create("Click Me!");
+		auto spr = CCSprite::createWithSpriteFrameName("GJ_musicOnBtn_001.png");
 		auto btn = CCMenuItemSpriteExtra::create(
 			spr,
 			this,
@@ -27,7 +27,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 		menu->addChild(btn);
 		log::debug("Added the button to the menu");
 
-		// Added an ID to the button
+		// Add an ID to the button
 		btn->setID("sound-effect-button"_spr);
 
 		// Update the menu so that it shows in-game
