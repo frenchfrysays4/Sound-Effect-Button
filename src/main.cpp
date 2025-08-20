@@ -49,17 +49,20 @@ class $modify(MyMenuLayer, MenuLayer) {
 
 		if (sound == 0) {
 			FMODAudioEngine::sharedEngine()->playEffect("among-us-role-reveal-sound.mp3"_spr);
+			log::info("Played Sound effect among us role reveal");
 		} else if (sound == 1) {
 			FMODAudioEngine::sharedEngine()->playEffect("error.mp3"_spr);
+			log::info("Played sound efffect error");
 		} else if (sound == 2) {
 			FMODAudioEngine::sharedEngine()->playEffect("metal-pipe-clang.mp3"_spr);
+			log::info("Played sound effect metal pipe clang");
 		} else if (sound == 3) {
 			FMODAudioEngine::sharedEngine()->playEffect("roblox-sword.mp3"_spr);
+			log::info("Played sound effect Roblox sword");
 		} else if (sound == 4) {
 			FMODAudioEngine::sharedEngine()->playEffect("vine-boom.mp3"_spr);
+			log::info("Played sound effect vine boom");
 		}
-
-		log::debug("Played sound effect");
 
 		sound = sound + 1;
 
