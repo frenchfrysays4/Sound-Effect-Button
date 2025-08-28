@@ -1,8 +1,8 @@
 #include <Geode/Geode.hpp>
+#include <Geode/modify/MenuLayer.hpp>
 
 using namespace geode::prelude;
 
-#include <Geode/modify/MenuLayer.hpp>
 class $modify(MyMenuLayer, MenuLayer) {
 	bool init() {
 		if (!MenuLayer::init()) {
@@ -24,15 +24,23 @@ class $modify(MyMenuLayer, MenuLayer) {
 
 		// Declare menu and add a child
 		auto menu = this->getChildByID("bottom-menu");
-		menu->addChild(btn);
-		log::debug("Added the button to the menu");
-
-		// Add an ID to the button
-		btn->setID("sound-effect-button"_spr);
-
-		// Update the menu so that it shows in-game
-		menu->updateLayout();
-		log::debug("Updated layout of the menu so that the button shows");
+		if (menu) {
+			menu->addChild(btn);
+			log::debug("Added the button to the menu");
+			// Add an ID to the button
+			btn->setID("sound-effect-button");
+			// Update the menu so that it shows in-game
+			menu->updateLayout();
+			log::debug("Updated layout of the menu so that the button shows");
+		} else {
+			log::error("Menu 'bottom-menu' not found!");
+			FLAlertLayer::create(
+				"Error",
+				"Menu 'bottom-menu' not found! The button will not be added.",
+				"OK"
+			)->show();
+			return true;
+		}
 
 		return true;
 	}
@@ -40,7 +48,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 	void onMyButton(CCObject*) {
 		FLAlertLayer::create(
 			"Clicked!",
-			"I have played a <cj>Sound Effect</cj>!",
+			"I have played a <cj>Sound Effect</c>!",
 			"OK"
 		)->show();
 		log::debug("Showed popup");
