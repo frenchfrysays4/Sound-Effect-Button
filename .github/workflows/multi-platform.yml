@@ -13,7 +13,7 @@ jobs:
       matrix:
         config:
         - name: Windows
-          os: windows-latest
+          os: self-hosted-win
 
         - name: macOS
           os: macos-latest
@@ -23,11 +23,11 @@ jobs:
           target: iOS
 
         - name: Android32
-          os: ubuntu-latest
+          os: self-hosted-linux
           target: Android32
 
         - name: Android64
-          os: ubuntu-latest
+          os: self-hosted-linux
           target: Android64
 
     name: ${{ matrix.config.name }}
