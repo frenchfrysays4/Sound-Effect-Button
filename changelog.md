@@ -1,3 +1,6 @@
+# v1.2.0
+- Ported to Geode v4.8.0
+
 # v1.1.1
 - Changed log statements to say the name of the sound effect
 
